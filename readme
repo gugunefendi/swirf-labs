@@ -1,0 +1,4 @@
+1. Buat database baru dengan nama 'swirf_labs'
+2. Import sql
+3. Jalankan server apache / nginx dan buka port mysql
+4. Buka file index.html

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Employee Form</h1>
+            <form id="employeeForm">
+                <table class="form-table">
+                    <tr>
+                        <p class="error" id="errorMessage"></p>
+                        <p class="success" id="successMessage"></p>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="name">Nama:</label></td>
+                        <td class="input"><input type="text" id="name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="number_identification">NIK:</label></td>
+                        <td class="input"><input type="text" id="number_identification" name="number_identification" required></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="dob">Tanggal Lahir:</label></td>
+                        <td class="input"><input type="date" id="dob" name="dob"></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="age">Umur:</label></td>
+                        <td class="input"><input type="text" id="age" name="age" readonly required></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="address">Alamat:</label></td>
+                        <td class="input"><input type="text" id="address" name="address"></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="occupation">Pekerjaan:</label></td>
+                        <td class="input">
+                            <select id="occupation" name="occupation" required>
+                                <option value="">Pilih Pekerjaan</option>
+                                <option value="Pengangguran">Pengangguran</option>
+                                <option value="Programmer">Programmer</option>
+                                <option value="Desainer">Desainer</option>
+                                <option value="Arsitek">Arsitek</option>
+                                <option value="Artis">Artis</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="place">Tempat:</label></td>
+                        <td class="input"><input type="text" id="place" name="place"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="input">
+                            <button type="submit">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <div class="list-container">
+            <h2>Employee List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Nama</th>
+                        <th style="width: 10%;">Umur</th>
+                        <th style="width: 40%;">Alamat</th>
+                        <th style="width: 20%;">Pekerjaan</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTable">
+                    <!-- employees data -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="module" src="script/formHandler.js"></script>
+    <script type="module" src="script/employeeLoader.js"></script>
+</body>
+</html>
